@@ -1,0 +1,345 @@
+nav {
+    background-color: rgba(0, 140, 255, 0.63);
+    background: -webkit-linear-gradient(45deg , rgba(0, 140, 255, 0.63) , black );
+    z-index: 999;
+    
+}
+
+/* From Uiverse.io by themrsami */ 
+.search-container {
+    position: relative;
+    width: 250px;
+}
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.search-input {
+    width: 100%;
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px;
+    outline: none;
+}  
+.search-input::placeholder {
+    color: #aaa;
+}  
+.search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 3px;
+    background-color: #333;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}  
+.search-icon svg {
+    fill: #fff;
+}  
+.search-icon:hover {
+    background-color: #555;
+}
+.search-bar:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+} 
+.search-bar:focus-within {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+.glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 200%;
+    border-radius: 100px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    transition: all 0.5s ease;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: -1;
+}  
+.search-bar:hover + .glow {
+    transform: translate(-50%, -50%) scale(1);
+}  
+.search-bar:focus-within + .glow {
+    transform: translate(-50%, -50%) scale(1.2);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+}
+
+header .email:focus {
+    outline: 0;
+    color: #1081c8;
+    outline-color: #1081c8;
+    box-shadow: -3px -3px 15px #1081c8;
+    transition: .1s;
+    transition-property: box-shadow;
+}
+/* end header */
+/* ? //////////////////////////////////..................main.............../////////////////// */
+/* Start main */
+main {
+    width: 100%;
+    height: 100dvh;
+    background: url(../images/main-hero-img.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+main .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 , 0 , 0 , 0.4) ;
+}
+main .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    color: white;
+}
+main .content h2 {
+    background: -webkit-linear-gradient(45deg , rgba(0, 140, 255, 0.63)  , black);
+    background-clip: text;
+    color: transparent;
+    font-size: 50px;
+    font-style: italic;
+}
+main .content p {
+    font-size: 25px;
+}
+/* End main */
+/* ? ////////////////////////////////.................cards............//////////////////////// */
+.card {
+    box-shadow: 1px 1px 5px #1081c8;
+    transition: 0.5s;
+    cursor: pointer;
+    animation: animated  linear;
+    -webkit-animation: animated  linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@keyframes animated {
+    from {
+        opacity: 0;
+        /*scale: 0;
+        */transform: translateX(-100px);
+}
+    to {
+        opacity: 1;
+        /* scale: 1; */
+        transform: translateX(0);
+        
+}
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card i {
+    color: #1088c8;
+}
+.card:hover i {
+    color: #402fb5;
+    animation: moving-arrow 0.6s linear infinite;
+}
+@keyframes moving-arrow{
+    100%{
+        transform: translatex(10px);
+    }
+}
+.main-title {
+    background: -webkit-linear-gradient(45deg, black , rgba(0, 140, 255, 0.63));
+    background-clip: text;
+    color: transparent;
+    font-style: italic;
+}
+/* ? //////////////////////....................content/price/del..........///////////////// */
+#btn1 {
+    background: -webkit-linear-gradient(45deg , rgb(17, 0, 255) , black);
+    font-size: large;
+    font-weight: bold;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+#btn1:focus {
+    box-shadow: 1px 1px 15px blue;
+}
+#del {
+    background: -webkit-linear-gradient(180deg , #bb2d3b , rgba(0, 0, 0, 0.612));
+    font-size: large;
+    font-weight: bold;
+    transition: 0.5s;
+}
+#del:hover {
+    box-shadow: 1px 1px 15px #bb2d3b;
+}
+#content {
+    background: -webkit-linear-gradient(45deg , green , rgba(0, 0, 0, 0.749));
+    font-size: large;
+    box-shadow: 1px 1px 15px green;
+    text-shadow: 2px 2px 2px black;
+}
+#mony {
+    background: -webkit-linear-gradient(45deg , rgb(11, 133, 181) , rgba(0, 0, 0, 0.749));
+    margin: 15px auto;
+    padding: 6px;
+    color: white;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: bold;
+    box-shadow: 1px 1px 15px rgb(11, 133, 181);
+    text-shadow: 3px 3px 4px black;
+}
+/*? ///////////////////////////////............home...........///////////////////////////////// */
+.out {
+    color: #1081c8;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    z-index: 99;
+    display: none;
+}
+/* //////////////////////////////////////////////////////////// */
+.notfound {
+    text-align: center;
+    background: -webkit-linear-gradient(45deg , #bb2d3b , black);
+    /* padding: 5px; */
+    /* display: none; */
+}
+
+
+
+
+header li{
+    position: relative;
+    overflow: hidden;
+    }
+    header ul li:hover span:nth-child(1){
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: -webkit-linear-gradient(45deg, rgb(11, 133, 181) , black);
+        animation: line1 1s linear infinite;
+    
+}
+    @keyframes line1{
+        0%{
+            transform: translateX(-100%);
+        }
+        
+        100%{
+            transform: translateX(100%);
+        }
+        
+        }
+        header ul li:hover span:nth-child(2){
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3px;
+            height: 100%;
+            /* background: -webkit-linear-gradient(45deg, black , green , blue , #e1306c); */
+        background: -webkit-linear-gradient(45deg, rgb(11, 133, 181) , black);
+            animation: line2 1s linear infinite;
+            animation-delay: 0.5s;
+            z-index: 1;
+        }
+            
+        @keyframes line2{
+            0%{
+                transform: translateY(-100%);
+            }
+            100%{
+                transform: translateY(100%);
+            }
+        }
+        header ul li:hover span:nth-child(3){
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            /* background: -webkit-linear-gradient(45deg, black , green , blue , #e1306c); */
+        background: -webkit-linear-gradient(45deg, rgb(11, 133, 181) , black);
+            animation: line3 1s linear infinite;
+            animation-fill-mode: forwards;
+        }
+        
+        @keyframes line3{
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+        header ul li:hover span:nth-child(4){
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            /* background: -webkit-linear-gradient(45deg, black , green , blue , #e1306c); */
+        background: -webkit-linear-gradient(45deg, rgb(11, 133, 181) , black);
+            animation: line4 0,5s linear infinite;
+            animation-delay: 0.5s;
+            z-index: 3;
+        }
+                        
+        @keyframes line4{
+                        
+            0%{
+                transform: translateY(-100%);
+            }
+            
+            100%{
+                transform: translateY(100%);
+            }
+        }
+        
+    
+
+
+
+        marquee {
+            padding: 8px;
+            font-style: italic;
+            font-weight: bold;
+            position: absolute;
+            margin-top: 10px;
+            box-shadow: 1px 1px 5px black;
+            animation: mark 5s linear infinite;
+            -webkit-animation: mark 5s linear infinite;
+}
+@keyframes mark {
+    0% {
+        color: white;
+    }
+    20% {
+        color: blue;
+    }
+    50% {
+        color: white;
+    }
+    70% {
+        color: red;
+    }
+    90% {
+        color: green;
+    }
+    100% {
+        color: gold;
+    }
+}
